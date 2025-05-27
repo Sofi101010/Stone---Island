@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Adidas Ultraboost</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d6d6d6;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .product-img img {
+      width: 300px;
+      border: 4px solid #007bff;
+    }
+    .details {
+      flex: 1;
+    }
+    .details h2 {
+      margin-top: 0;
+    }
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+    .form-group {
+      margin: 15px 0;
+    }
+    label {
+      font-weight: bold;
+      color: #c62828;
+    }
+    select, input {
+      padding: 8px;
+      width: 150px;
+      margin-left: 10px;
+    }
+    .order-btn {
+      background-color: orange;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .order-btn:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="product-img">
+      <img src="SEPATU.webp" alt="Adidas Shoes"/>
+    </div>
+    <div class="details">
+      <h2>Adidas Ultraboost 23 – Nyaman, Ringan, dan Tangguh!</h2>
+      <p>
+        Sepatu lari original dari Adidas dengan teknologi Boost untuk kenyamanan maksimal di setiap langkah.
+        Desain stylish, ringan, dan fleksibel – cocok untuk olahraga maupun gaya kasual.
+        <br/><br/>
+        ✅ 100% Original & Garansi Resmi <br/>
+        📦 COD & pengiriman cepat!
+      </p>
+
+      <p><label>Ukuran:</label> <span class="highlight">Ready size 39–44</span></p>
+
+      <form onsubmit="return redirectToWA()">
+        <div class="form-group">
+          <label for="size">Pilih Ukuran</label>
+          <select id="size" name="size">
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="qty">Jumlah</label>
+          <input type="number" id="qty" name="qty" min="1" value="1" />
+        </div>
+
+        <button type="submit" class="order-btn">ORDER NOW</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function redirectToWA() {
+      const size = document.getElementById("size").value;
+      const qty = document.getElementById("qty").value;
+      const phone = "6287818431786";
+      const message = `Halo, saya ingin order Adidas Ultraboost 23.%0AUkuran: ${size}%0AJumlah: ${qty}`;
+      const url = `https://wa.me/${phone}?text=${message}`;
+      window.open(url, "_blank");
+      return false;
+    }
+  </script>
+
+</body>
+</html>
